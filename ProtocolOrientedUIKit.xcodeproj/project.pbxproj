@@ -15,6 +15,11 @@
 		DC99250529FABC5400FC3D87 /* ProtocolOrientedUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC99250429FABC5400FC3D87 /* ProtocolOrientedUIKitTests.swift */; };
 		DC99250F29FABC5400FC3D87 /* ProtocolOrientedUIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC99250E29FABC5400FC3D87 /* ProtocolOrientedUIKitUITests.swift */; };
 		DC99251129FABC5400FC3D87 /* ProtocolOrientedUIKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC99251029FABC5400FC3D87 /* ProtocolOrientedUIKitUITestsLaunchTests.swift */; };
+		DC99252129FAC0E100FC3D87 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC99252029FAC0E100FC3D87 /* User.swift */; };
+		DC99252329FAC12500FC3D87 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC99252229FAC12500FC3D87 /* APIManager.swift */; };
+		DC99252629FAC47100FC3D87 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC99252529FAC47100FC3D87 /* UserViewModel.swift */; };
+		DC99252929FAC51000FC3D87 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC99252829FAC51000FC3D87 /* UserService.swift */; };
+		DC99252B29FAC70600FC3D87 /* UserViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC99252A29FAC70600FC3D87 /* UserViewModelOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		DC99250A29FABC5400FC3D87 /* ProtocolOrientedUIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolOrientedUIKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC99250E29FABC5400FC3D87 /* ProtocolOrientedUIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolOrientedUIKitUITests.swift; sourceTree = "<group>"; };
 		DC99251029FABC5400FC3D87 /* ProtocolOrientedUIKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolOrientedUIKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DC99252029FAC0E100FC3D87 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DC99252229FAC12500FC3D87 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		DC99252529FAC47100FC3D87 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		DC99252829FAC51000FC3D87 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		DC99252A29FAC70600FC3D87 /* UserViewModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +107,12 @@
 		DC9924EC29FABC5300FC3D87 /* ProtocolOrientedUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				DC99252429FAC45D00FC3D87 /* ViewModel */,
+				DC99251F29FAC0BB00FC3D87 /* Model */,
+				DC99251E29FAC0A300FC3D87 /* Service */,
+				DC99251D29FAC08A00FC3D87 /* View */,
 				DC9924ED29FABC5300FC3D87 /* AppDelegate.swift */,
 				DC9924EF29FABC5300FC3D87 /* SceneDelegate.swift */,
-				DC9924F129FABC5300FC3D87 /* UserViewController.swift */,
 				DC9924F629FABC5400FC3D87 /* Assets.xcassets */,
 				DC9924F829FABC5400FC3D87 /* LaunchScreen.storyboard */,
 				DC9924FB29FABC5400FC3D87 /* Info.plist */,
@@ -122,6 +135,40 @@
 				DC99251029FABC5400FC3D87 /* ProtocolOrientedUIKitUITestsLaunchTests.swift */,
 			);
 			path = ProtocolOrientedUIKitUITests;
+			sourceTree = "<group>";
+		};
+		DC99251D29FAC08A00FC3D87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC9924F129FABC5300FC3D87 /* UserViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DC99251E29FAC0A300FC3D87 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DC99252229FAC12500FC3D87 /* APIManager.swift */,
+				DC99252829FAC51000FC3D87 /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DC99251F29FAC0BB00FC3D87 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC99252029FAC0E100FC3D87 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DC99252429FAC45D00FC3D87 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC99252529FAC47100FC3D87 /* UserViewModel.swift */,
+				DC99252A29FAC70600FC3D87 /* UserViewModelOutput.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC99252B29FAC70600FC3D87 /* UserViewModelOutput.swift in Sources */,
+				DC99252929FAC51000FC3D87 /* UserService.swift in Sources */,
+				DC99252129FAC0E100FC3D87 /* User.swift in Sources */,
+				DC99252629FAC47100FC3D87 /* UserViewModel.swift in Sources */,
 				DC9924F229FABC5300FC3D87 /* UserViewController.swift in Sources */,
+				DC99252329FAC12500FC3D87 /* APIManager.swift in Sources */,
 				DC9924EE29FABC5300FC3D87 /* AppDelegate.swift in Sources */,
 				DC9924F029FABC5300FC3D87 /* SceneDelegate.swift in Sources */,
 			);
